@@ -1,6 +1,7 @@
-### Creating Cloud-Init-initialized VM template and clones via Proxmox command line ### 
+## Creating Cloud-Init-initialized VM template and clones via Proxmox command line ## 
 
-Prerequisites: 
+### Prerequisites: ###
+
 1. We should have cloud image installed on the node level, for example this one:
 ```
 wget https://download.rockylinux.org/pub/rocky/9.0/images/x86_64/Rocky-9-GenericCloud-9.0-20220706.0.x86_64.qcow2
@@ -16,7 +17,7 @@ cd ./cloudinit-exp/
 nano ./create-rocky9-dc0.sh
 ```
 
-### create-rocky9-dc0.sh : ###
+create-rocky9-dc0.sh :
 ```
 #!/bin/bash
 set -e
@@ -53,8 +54,9 @@ qm set 6013 --ipconfig0 ip=10.44.106.13/24,gw=10.44.111.1
 
 You have to edit parameters accordingly to your preferences and settings on your machine.
 
-Then you run the script: 
+### Steps: ###
+
+Then you run the script (or commands from it one by one): 
 ```
 ./create-rocky9-dc0.sh
 ```
-or commands from it one by one.
