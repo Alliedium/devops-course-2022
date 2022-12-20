@@ -1,3 +1,24 @@
+## References to the next Lesson: Container orchestration, Kubernetes basics
+
+13. [Kubernetes explained in pictures: the theme park analogy](https://danlebrero.com/2018/07/09/kubernetes-explained-in-pictures-the-theme-park-analogy/)
+14. [Kubernetes services, pods, ingress ... all the basic components](https://www.padok.fr/en/blog/kubernetes-essentials-components-pods-services)
+15. [Alliedium / springboot-api-rest-example](https://github.com/Alliedium/springboot-api-rest-example/tree/master/.k8s#prerequisites)
+16. [Kubernetes | Pods](https://kubernetes.io/docs/concepts/workloads/pods/)
+17. [Kubernetes | Volumes | emptyDir](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir)
+18. [Kubernetes | Dynamic Volume Provisioning](https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/)
+19. [Kubernetes | Persistent Volumes | Access Modes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes)
+20. [Kubernetes | Persistent Volumes | Node Affinity](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#node-affinity)
+21. [Kubernetes Persistent Volumes: Examples & Best Practices](https://loft.sh/blog/kubernetes-persistent-volumes-examples-and-best-practices/)
+22. [Configure a Pod to Use a PersistentVolume for Storage](https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/)
+23. [DNS for Services and Pods](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/)
+24. [Kubernetes NodePort vs LoadBalancer vs Ingress? When should I use what?](https://medium.com/google-cloud/kubernetes-nodeport-vs-loadbalancer-vs-ingress-when-should-i-use-what-922f010849e0)
+25. [Think Before you NodePort in Kubernetes](https://oteemo.com/think-nodeport-kubernetes/)
+26. [Using NodePort](https://docs.solace.com/Cloud/Deployment-Considerations/k8s-using-nodeport.htm)
+27. [Expose Pod Information to Containers Through Environment Variables](https://kubernetes.io/docs/tasks/inject-data-application/environment-variable-expose-pod-information/)
+28. [StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset)
+29. [StatefulSets | Pod Identity | Stable Network ID](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/#stable-network-id)
+30. [StatefulSets | Pod Identity | Stable Storage](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/#stable-storage)
+
 ## References on: Container orchestration, Kubernetes basics, part 2, 27 Sep 2022
 
 1. [Kubernetes explained in pictures: the theme park analogy](https://danlebrero.com/2018/07/09/kubernetes-explained-in-pictures-the-theme-park-analogy/)

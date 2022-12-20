@@ -1,4 +1,5 @@
-## Demo on: Container orchestration, Kubernetes basics, part 2, 27 Sep 2022
+## Container orchestration Kubernetes basics: containers, pods, ephemeral volumes 27 Sep 2022 ##
+------------------------------------------------------------------------------------------------
 
 Before you begin, please comply the following **Cleaning actions**
 
