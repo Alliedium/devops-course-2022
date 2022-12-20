@@ -1,6 +1,6 @@
 ## Using fstrim, Cloud-Init, Ansible, LVM resize additional PV, systemctl ##
 
-### Contents: ###
+### Table of Contents: ###
 
 - [fstrim setup and usage](./fstrim_timer.md)
 - [Generating VMs from cloud-init images](./cloudinit-exp/cloudinit.md)
