@@ -1,10 +1,10 @@
 # Proxmox LVM resize disk, SSH access, Proxmox backups #
 
-| Part | Details |
-|------|-------|
-| [Part 1](#lvm) | How to resize LVM on Proxmox |
-| [Part 2](#ssh) | Setting up SSH access |
-| [Part 3](#backup) | Setting up backups on Proxmox |
+### Table of contents ###
+
+- [How to resize LVM on Proxmox](#lvm)
+- [Setting up SSH access](#ssh)
+- [Setting up backups on Proxmox](#backup)
 
 ---
 
