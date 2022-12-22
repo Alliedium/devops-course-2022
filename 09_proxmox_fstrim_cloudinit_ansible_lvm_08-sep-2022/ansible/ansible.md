@@ -2,14 +2,14 @@
 
 ### Prerequisites: ###
 
-1. We should have ansible installed on the vm we want to execute the ansible playbook on.
+1. Ansible should be installed on the control VM (where the playbooks will be run).
 
 ```
 sudo dnf install epel-release
 sudo dnf install ansible
 ```
 
-2. We should also have script created / placed in the following directory:
+2. The playbook is placed in the following directory:
 
 ```
 cd k8s-experiments/ansible/playbooks/
@@ -19,29 +19,28 @@ nano ./playbooks/change-hostnames.yml
 
 ### Steps: ###
 
-We need hosts.ini file to specify the ip addresses of the hosts we want to change by this script. 
-In our case they were placed into directory named cloudinit-vms.
+A hosts.ini file is necessary to specify the IP addresses of the hosts supposed to get affected by the playbook. 
+The file is placed into directory named cloudinit-vms.
 ```
 cd ..
 cd ./inventory/cloudinit-vms
 nano ./hosts.ini
 ```
 
-Once we have specified the ips and the hostnames we would like to be set on those vms,
-we need to turn on ssh-agent:
+Once the IPs and the preferable hostnames are specified, ssh-agent has to be enabled:
 ```
 cd ~
 eval `ssh-agent`
 ssh-add ./id_rsa_cloudinit
 ```
 
-Then we can run our playbook:
+Then run the playbook:
 ```
 cd k8s-experiments/ansible/
 ansible-playbook -i ./inventory/cloudinit-vms/hosts.ini -v ./playbooks/change-hostnames.yml
 ```
 
-In case we need info about roles:
+In case info about roles is necessary:
 ```
 ansible-galaxy role --help
 ```
@@ -50,7 +49,7 @@ To install a new role:
 ```
 ansible-galaxy role install bodsch.snapd
 ```
-Should appear in the list:
+The role should appear in the list:
 ```
 ansible-galaxy role list
 ```

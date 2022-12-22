@@ -2,18 +2,14 @@
 
 ### Prerequisites: ###
 
-1. We should have cloud image installed on the node level, for example this one:
+1. The cloud image has to be installed on the node level, for example this one:
 ```
 wget https://download.rockylinux.org/pub/rocky/9.0/images/x86_64/Rocky-9-GenericCloud-9.0-20220706.0.x86_64.qcow2
 ```
-2. We should have a copy of ssh key we want to enter with (from the another machine most probably) 
-(passed either via scp or ssh-copy-id)
+2. There should be a copy of SSH key (most probably passed either via scp or ssh-copy-id from the another machine user is going to manage the VMs from)
                
-3. We should have a bash script or perform following commands in terminal manually one by one. 
-
-I have this script I've passed from another vm via scp, it is placed here:
+3. There should be a bash script (passed from another VM via scp):
 ```
-cd ./cloudinit-exp/
 nano ./create-rocky9-dc0.sh
 ```
 
@@ -52,11 +48,11 @@ qm clone 6001 6013 --name k3s-r9-dc0-master3 --pool k3s-rocky9-dc0 --full
 qm set 6013 --ipconfig0 ip=10.44.106.13/24,gw=10.44.111.1
 ```
 
-You have to edit parameters accordingly to your preferences and settings on your machine.
+It might be necessary to edit parameters according to your needs.
 
 ### Steps: ###
 
-Then you run the script (or commands from it one by one): 
+Then run the script (or commands from it one by one): 
 ```
 ./create-rocky9-dc0.sh
 ```

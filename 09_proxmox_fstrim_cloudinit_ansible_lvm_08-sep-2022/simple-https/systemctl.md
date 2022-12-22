@@ -2,32 +2,38 @@
 
 ### Prerequisites ###
 
-1. We need 3 files in simple-https directory (you can find them in simple-https directory and pass via scp onto your VM):
+1. Python should to be installed:
 ```
-[tatyana@rocky ~]$ cd simple-https/
-[tatyana@prodlike-config simple-https]$ ls
-example-com.conf  make-cert.sh  simple-server.py
-[tatyana@rocky simple-https]$ nano simple-server.py
+sudo dnf install python3
 ```
 
-2. We need python to be installed:
+2. There should be 3 files in simple-https directory:
 ```
-[tatyana@rocky ~]$ sudo dnf install python3
+git clone https://github.com/Alliedium/devops-course-2022
+cd ./devops-course-2022/09_proxmox_fstrim_cloudinit_ansible_lvm_08-sep-2022/simple-https
+```
+```
+ls
+```
+result:
+```
+example-com.conf  make-cert.sh  simple-server.py
 ```
 
 ### Creation ###
 
-1. We should run make-cert.sh first in order to generate certificate.
+1. Run make-cert.sh first in order to generate certificate.
 
-2. We can check if our python script can be executed without errors:
+2. Check if the python script can be executed without errors:
 ```
-[tatyana@rocky simple-https]$ python3 simple-server.py
+cd ./simple-https
+python3 simple-server.py
 ```
  
-3. In order to start it from the service we need following:
+3. In order to start it from the service it's necessary to create it:
 ```
-[tatyana@rocky ~]$ cd /etc/systemd/system/
-[tatyana@rocky system]$ sudo nano simple-https.service
+cd /etc/systemd/system/
+sudo nano simple-https.service
 ```
 
 The service code is below:
@@ -43,35 +49,34 @@ ExecStart=/usr/bin/python3 /home/tatyana/simple-https/simple-server.py
 WantedBy=multi-user.target
 ```
 
-4. Once you added a new service or made any changes in existing one you should run:
+4. Once a new service is added reload the systemctl daemon:
 ```
-[tatyana@rocky system]$ sudo systemctl daemon-reload
+sudo systemctl daemon-reload
 ```
 
 ### Management ###
 
-Then we can start the service:
+Start the service:
 ```
-[tatyana@rocky system]$ sudo systemctl start simple-https.service
-```
-
-And check our server response:
-```
-[tatyana@rocky system]$ curl https://10.115.176.36:4443 --insecure
+sudo systemctl start simple-https.service
 ```
 
-Let's stop the service:
+Check server's response:
 ```
-[tatyana@rocky system]$ sudo systemctl stop simple-https.service
+curl https://10.115.176.36:4443 --insecure
 ```
 
-Let's make sure the server has been stopped as well 
-(make sure it is not still running outside the server):
+Stop the service:
 ```
-[tatyana@rocky system]$ curl https://10.115.176.36:4443 --insecure
+sudo systemctl stop simple-https.service
+```
+
+Check server's response to make sure the server has been stopped (not still running outside the server):
+```
+curl https://10.115.176.36:4443 --insecure
 ```
 
 View logs:
 ```
-[tatyana@rocky system]$ sudo journalctl -u simple-https.service
+sudo journalctl -u simple-https.service
 ```

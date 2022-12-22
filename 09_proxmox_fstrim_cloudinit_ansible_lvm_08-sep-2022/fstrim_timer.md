@@ -1,6 +1,6 @@
-##  Why and how we should use Trim/Discard ## 
+##  Why and how to use Trim/Discard ## 
 
-LVM normally allocates blocks when you create a volume. 
+LVM normally allocates blocks when a volume is created. 
 LVM thin pools instead allocates blocks when they are written. 
 This behaviour is called thin-provisioning, because volumes can be much larger than physically available space.
 
@@ -8,11 +8,17 @@ It is good practice running _fstrim_ (discard) regularly on VMs and containers.
 This releases data blocks that the filesystem isn’t using anymore. 
 It reduces data usage and resource load. 
 Most modern operating systems issue such discard commands to their disks regularly. 
-You only need to ensure that the Virtual Machines enable the disk discard option.
+It's only necessary to ensure that the Virtual Machines enable the disk discard option.
 
-According to official documentation, we need
--   Enable `Discard` and `SSD Emulation` flags for drive
--   Regularly run `fstrim` inside guest OS (doesn't matter hdd or ssd used on the host machine)
+According to official documentation,`Discard` and `SSD Emulation` flags for drive have to be enabled.
+- To enable discard check the according checkbox:
+  - The setting is here when creating a VM:
+    - ![Discard setting position on VM creation](./images/discard_on_creation.png)
+  - The setting is here when editing:
+    - ![Discard setting position on VM edit](./images/edit_discard.png)
+- The SSD emulation is enabled by default at VirtIO Block devices. If other type is used (e.g., SCSI) it's necessary to enable it explicitly as shown below:
+  - ![SSD emulation setting position on VM creation](./images/ssd_emulation.png)
+- Regularly run `fstrim` inside guest OS (doesn't matter whether hdd or ssd is used on the host machine)
 
 ### Setting up fstrim ###
 
