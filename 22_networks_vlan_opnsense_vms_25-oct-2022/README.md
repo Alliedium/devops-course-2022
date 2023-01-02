@@ -3,7 +3,6 @@
 ### Prerequisites: ### 
 - Proxmox node with ~ 16 GiB RAM and ~ 90 GB local disk storage
 - [OPNsense ISO](https://mirror.fra10.de.leaseweb.net/opnsense/releases/22.7/OPNsense-22.7-OpenSSL-dvd-amd64.iso.bz2)
-- [Proxmox ISO](https://www.proxmox.com/en/downloads/item/proxmox-ve-7-3-iso-installer)
 - [Manjaro ISO](https://download.manjaro.org/kde/22.0/manjaro-kde-22.0-minimal-221224-linux61.iso)
 
 The ISO images should be uploaded in the local storage on Proxmox:
