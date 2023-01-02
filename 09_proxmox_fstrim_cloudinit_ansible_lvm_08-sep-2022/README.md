@@ -1,12 +1,26 @@
 ## Using fstrim, Cloud-Init, Ansible, LVM resize additional PV, systemctl ##
 
+### Prerequisites ###
+
+Clone the repository:
+
+```
+git clone https://github.com/Alliedium/devops-course-2022
+```
+
+Dive into the current lesson folder:
+
+```
+cd ./09_proxmox_fstrim_cloudinit_ansible_lvm_08-sep-2022
+```
+
 ### Table of contents ###
 
-- [fstrim setup and usage](./fstrim_timer.md)
-- [Generating VMs from cloud-init images](./cloudinit-exp/cloudinit.md)
-- [Configuring VMs using Ansible](./ansible/ansible.md)
-- [How to resize LVM with additional PV](./lvm_resize_additional_pv.md)
-- [Managing a simple HTTPS server with systemctl](./simple-https/systemctl.md)
+- [fstrim setup and usage](./fstrim-timer/README.md)
+- [Generating VMs from cloud-init images](./cloudinit-exp/README.md)
+- [Configuring VMs using Ansible](./ansible/README.md)
+- [How to resize LVM with additional PV](./lvm-resize-additional-pv/README.md)
+- [Managing a simple HTTPS server with systemctl](./simple-https/README.md)
 
 ### References ###
 

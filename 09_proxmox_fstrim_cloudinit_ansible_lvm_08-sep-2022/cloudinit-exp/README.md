@@ -6,10 +6,13 @@
 ```
 wget https://download.rockylinux.org/pub/rocky/9.0/images/x86_64/Rocky-9-GenericCloud-9.0-20220706.0.x86_64.qcow2
 ```
-2. There should be a copy of SSH key (most probably passed either via scp or ssh-copy-id from the another machine user is going to manage the VMs from)
+2. There should be a copy of SSH key (passed either via scp or ssh-copy-id from the another machine user is going to manage the VMs from)
+
+### Steps: ###
                
-3. There should be a bash script (passed from another VM via scp):
+1. Open the bash script:
 ```
+cd ./cloudinit-exp
 nano ./create-rocky9-dc0.sh
 ```
 
@@ -48,11 +51,9 @@ qm clone 6001 6013 --name k3s-r9-dc0-master3 --pool k3s-rocky9-dc0 --full
 qm set 6013 --ipconfig0 ip=10.44.106.13/24,gw=10.44.111.1
 ```
 
-It might be necessary to edit parameters according to your needs.
+#### Note: It might be necessary to edit parameters according to your needs. ####
 
-### Steps: ###
-
-Then run the script (or commands from it one by one): 
+2. Run the script (or commands from it one by one): 
 ```
 ./create-rocky9-dc0.sh
 ```

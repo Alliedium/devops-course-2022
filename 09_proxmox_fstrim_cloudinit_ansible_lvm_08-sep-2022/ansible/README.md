@@ -12,31 +12,32 @@ sudo dnf install ansible
 2. The playbook is placed in the following directory:
 
 ```
-cd k8s-experiments/ansible/playbooks/
-ls
+cd ./ansible
 nano ./playbooks/change-hostnames.yml
+```
+
+3. The SSH key to managed machines should be placed in .ssh directory:
+
+```
+nano ~/.ssh/id_rsa_cloudinit
 ```
 
 ### Steps: ###
 
 A hosts.ini file is necessary to specify the IP addresses of the hosts supposed to get affected by the playbook. 
-The file is placed into directory named cloudinit-vms.
+The file is placed into subdirectory named cloudinit-vms. Edit the IP addressees if necessary.
 ```
-cd ..
-cd ./inventory/cloudinit-vms
-nano ./hosts.ini
+nano ./inventory/cloudinit-vms/hosts.ini
 ```
 
 Once the IPs and the preferable hostnames are specified, ssh-agent has to be enabled:
 ```
-cd ~
 eval `ssh-agent`
-ssh-add ./id_rsa_cloudinit
+ssh-add ~/.ssh/id_rsa_cloudinit
 ```
 
 Then run the playbook:
 ```
-cd k8s-experiments/ansible/
 ansible-playbook -i ./inventory/cloudinit-vms/hosts.ini -v ./playbooks/change-hostnames.yml
 ```
 

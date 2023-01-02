@@ -9,8 +9,7 @@ sudo dnf install python3
 
 2. There should be 3 files in simple-https directory:
 ```
-git clone https://github.com/Alliedium/devops-course-2022
-cd ./devops-course-2022/09_proxmox_fstrim_cloudinit_ansible_lvm_08-sep-2022/simple-https
+cd ./simple-https
 ```
 ```
 ls
