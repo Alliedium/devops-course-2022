@@ -2,7 +2,7 @@
 
 ## Creating VMs on Proxmox node
   
-  ### Create 3 VMs on Proxmox node for `k3s` cluster via [awesome-linux-config's scripts](https://github.com/Alliedium/awesome-linux-config). Follow step 4 form [29 lecture](../29_configuring_opnsense_and_creating_vms_via_scripts_and_manual_10_nov_2022/README.md).
+  ### Create 3 VMs on Proxmox node for `k3s` cluster via [awesome-linux-config's scripts](https://github.com/Alliedium/awesome-linux-config). Follow step 4 form [29 lecture](../29_kubernetes_setting_up_k3s_prod_like_configuring_opnsense_creating_k3s_nodes_part_2-10_nov_2022/README.md).
 
 ## Install and manual configure VyOS
   
@@ -90,6 +90,7 @@
   set service dns forwarding listen-address '10.10.0.1'
   set service dns forwarding allow-from '10.10.0.0/24'
   set service dns forwarding system
+  set system name-server '10.44.111.1'
   ```
 
   * NAT

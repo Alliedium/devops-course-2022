@@ -18,11 +18,6 @@
   set system login user vyos-user authentication public-keys Adam type 'ssh-rsa'
   ```
 
-  * DNS
-  
-  ```
-  set system name-server '10.44.111.1'
-  ```
   * NTP servers
   
   ```
