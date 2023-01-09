@@ -39,7 +39,7 @@ Demo
 - Some Tools (LXC, Docker, Kubernetes, Podman)
 
 
-## 05 Docker Basic Commands 20220823
+## 05 Docker Basic Commands, PostgreSQL in Docker 20220823
 
 - Managing images and containers
 - Demo: run PostgreSQL in a container, connect via psql from host
@@ -50,14 +50,14 @@ Demo
 - Setting access via SSH
 - Backup and Restore
 
-## 07 Docker Best Practices 1 20220830
+## 07 Docker Best Practices I: building Docker images, PgAdmin in Docker 20220830
 
 - Dockerfile instructions
 - Image parameterization
 - Example 1: Simple Spring Boot application in a container with multi-stage build
 - Example 2: pgAdmin in a container
 
-## 08 Docker Best Practices 2 20220906
+## 08 Docker Best Practices II: multistage builds, different examples 20220906
 
 - Multistage builds
 - Example 1: Simple Spring Boot application improved
@@ -108,12 +108,12 @@ Kubernetes deployment types
 - How SSL/TLS uses Cryptography
 
 
-## 13 Container orchestration Kubernetes basics 1 20220922
+## 13 Kubernetes development basic tools (ending), Kubernetes cluster contexts 20220922
 
 - Kubernetes development tools (code-server, k9s, openlens)
 - Display Kubernetes current context in zsh command separator
 
-## 14 Container orchestration Kubernetes basics 2 20220927
+## 14 Container orchestation Kubernetes basics: containers, pods, ephemeral volumes 20220927
 
 Deployment variants of Spring Boot Application with PostgerSQL database
 - Example 1. Single pod with sidecar, ephemeral volume

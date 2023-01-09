@@ -1,4 +1,4 @@
-## Docker Basic Commands ##
+## Docker Basic Commands, PostgreSQL in Docker ##
 ---------------------------
 
 ### How to get help ###
@@ -377,3 +377,31 @@ docker system prune -af
 ```
 docker system df
 ```
+
+## References ##
+
+1. [Docker command line](https://docs.docker.com/engine/reference/commandline/cli/)
+2. [`docker system` - Manage Docker](https://docs.docker.com/engine/reference/commandline/system/)
+3. [`docker system df` - Show docker disk usage](https://docs.docker.com/engine/reference/commandline/system_df/)
+4. [Что такое Yay. Особенности. Использование](https://pingvinus.ru/note/yay)
+5. [postgresql-libs - The shared libraries required for any PostgreSQL clients](https://reposcope.com/package/postgresql-libs)
+6. [Docker Hub](https://hub.docker.com/)
+7. [postgres images on Docker Hub](https://hub.docker.com/search?q=postgres)
+8. [postgres Docker official image: Overview](https://hub.docker.com/_/postgres)
+9. [PostgreSQL](https://www.postgresql.org/)
+10. [postgres Docker official image: Tags with postgres version 14.5](https://hub.docker.com/_/postgres/tags?page=1&name=14.5)
+11. [`docker pull` - Pull an image or a repository from a registry](https://docs.docker.com/engine/reference/commandline/pull/)
+12. [`docker images` - List images](https://docs.docker.com/engine/reference/commandline/images/)
+13. [postgres Docker official image: Overview](https://hub.docker.com/_/postgres), Section: 'How to extend this image', Subsection: 'Environment Variables'
+14. [`docker run` - Run a command in a new container](https://docs.docker.com/engine/reference/commandline/run/)
+15. [`docker ps` - List containers](https://docs.docker.com/engine/reference/commandline/ps/)
+16. [`docker logs` - Fetch the logs of a container](https://docs.docker.com/engine/reference/commandline/logs/)
+17. [`docker pause` - Pause all processes within one or more containers](https://docs.docker.com/engine/reference/commandline/pause/)
+18. [`docker unpause` - Unpause all processes within one or more containers](https://docs.docker.com/engine/reference/commandline/unpause/)
+19. [`docker stop` - Stop one or more running containers](https://docs.docker.com/engine/reference/commandline/stop/)
+20. [`docker start` - Start one or more stopped containers](https://docs.docker.com/engine/reference/commandline/start/)
+21. [psql - PostgreSQL interactive terminal](https://reposcope.com/man/en/1/psql)
+22. [`docker exec` - Run a command in a running container](https://docs.docker.com/engine/reference/commandline/exec/)
+23. [`docker rm` - Remove one or more containers](https://docs.docker.com/engine/reference/commandline/rm/)
+24. [`docker rmi` - Remove one or more images](https://docs.docker.com/engine/reference/commandline/rmi/)
+25. [`docker system prune` - Remove unused data](https://docs.docker.com/engine/reference/commandline/system_prune/)

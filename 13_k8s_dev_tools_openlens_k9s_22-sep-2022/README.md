@@ -1,4 +1,5 @@
-## Demo on: Kubernetes Development Basic Tools (ending), 22 Sep 2022 
+## Kubernetes Development Basic Tools (ending), Kubernetes cluster contexts 22 Sep 2022 ##
+------------------------------------------------------------------------------------------
 
 ### VS Code on Linux VM
 
@@ -94,3 +95,18 @@ source ~/.p10k.zsh
 
 or, close and re-open the ssh connection to VM
 
+
+## References ##
+
+1. [Lens | The Kubernetes IDE](https://k8slens.dev/)
+2. [Lens LICENSE](https://github.com/lensapp/lens/blob/master/LICENSE)
+3. [Is it time to migrate from Lens to OpenLens to manage your Kubernetes clusters?](https://blog.devgenius.io/is-it-time-to-migrate-from-lens-to-openlens-75496e5758d8)
+4. [OpenLens project on GitHub](https://github.com/MuhammedKalkan/OpenLens)
+5. [OpenLens Releases](https://github.com/MuhammedKalkan/OpenLens/releases)
+6. [Обзор k9s — продвинутого терминального интерфейса для Kubernetes](https://habr.com/ru/company/flant/blog/524196/)
+7. [k9s | Kubernetes CLI To Manage Your Clusters In Style!](https://k9scli.io/)
+8. [API: use cases for kubectl attach?](https://github.com/kubernetes/kubernetes/issues/23335)
+9. [Kubectl attach vs kubectl exec?](https://stackoverflow.com/a/50031131)
+10. [Attach to existing containers](https://kubernetes.io/blog/2015/10/some-things-you-didnt-know-about-kubectl_28/#attach-to-existing-containers)
+11. [Docker | Start containers automatically](https://docs.docker.com/config/containers/start-containers-automatically/)
+12. [Restart option for new version (3.0) · Issue #317 · k3d-io/k3d](https://github.com/k3d-io/k3d/issues/317)
